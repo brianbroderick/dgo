@@ -1,6 +1,6 @@
 # dgo [![GoDoc](https://godoc.org/github.com/dgraph-io/dgo?status.svg)](https://godoc.org/github.com/dgraph-io/dgo) [![Build Status](https://teamcity.dgraph.io/guestAuth/app/rest/builds/buildType:(id:dgo_integration)/statusIcon.svg)](https://teamcity.dgraph.io/viewLog.html?buildTypeId=dgo_integration&buildId=lastFinished&guest=1)
 
-Official Dgraph Go client which communicates with the server using [gRPC](https://grpc.io/).
+This is a fork of the Official Dgraph Go client which communicates with the server using [gRPC](https://grpc.io/). I forked it because it didn't have a v2 folder for Go modules support.
 
 Before using this client, we highly recommend that you go through [tour.dgraph.io] and [docs.dgraph.io]
 to understand how to run and work with Dgraph.
@@ -32,8 +32,8 @@ use a different version of this client and their corresponding import paths.
 
 | Dgraph version | dgo version |        dgo import path        |
 |:--------------:|:-----------:|:-----------------------------:|
-|  dgraph 1.0.X  |  dgo 1.X.Y  |   "github.com/dgraph-io/dgo"  |
-|  dgraph 1.1.X  |  dgo 2.X.Y  | "github.com/dgraph-io/dgo/v2" |
+|  dgraph 1.0.X  |  dgo 1.X.Y  |   "github.com/brianbroderick/dgo"  |
+|  dgraph 1.1.X  |  dgo 2.X.Y  | "github.com/brianbroderick/dgo/v2" |
 
 Note: One of the most important API breakages from dgo v1 to v2 is in
 the function `dgo.Txn.Mutate`. This function returns an `*api.Assigned`
@@ -140,7 +140,7 @@ if err != nil {
 ```
 
 For a more complete example, see
-[GoDoc](https://godoc.org/github.com/dgraph-io/dgo#example-package--SetObject).
+[GoDoc](https://godoc.org/github.com/brianbroderick/dgo#example-package--SetObject).
 
 Sometimes, you only want to commit a mutation, without querying anything
 further. In such cases, you can use `mu.CommitNow = true` to indicate that the
