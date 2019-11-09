@@ -1,4 +1,4 @@
-module github.com/brianbroderick/dgo
+module github.com/brianbroderick/dgo/v2
 
 go 1.13
 
